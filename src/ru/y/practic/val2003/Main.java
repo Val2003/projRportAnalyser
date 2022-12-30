@@ -1,4 +1,4 @@
-package ru.yandex.practicum.val2003;
+package ru.y.practic.val2003;
 
 import java.time.Month;
 import java.util.*;
