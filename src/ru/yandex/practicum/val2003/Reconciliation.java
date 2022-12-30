@@ -4,8 +4,10 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
 public class Reconciliation {
-    HashMap<Month,Integer> expenseIncomeForMonth= new HashMap();            //траты и доходов за месяц
+    HashMap expensesByMonth = new HashMap<>();
+              //траты и доходов за месяц
     HashMap<Month,Integer> expenseIncomeForYear= new HashMap();             //траты и доходов за год,
 
     public  boolean reportsCompare() {
@@ -16,6 +18,9 @@ public class Reconciliation {
 
 
     private void compareMoths() {
+        ReportParser reportParser=new ReportParser();
+       // expenseIncomeForMonth=
+//MonthlyReport monthlyReport =new MonthlyReport();
 
 //        System.out.println();
     }

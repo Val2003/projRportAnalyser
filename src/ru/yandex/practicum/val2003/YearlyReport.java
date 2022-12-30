@@ -1,19 +1,20 @@
 package ru.yandex.practicum.val2003;
 
 import java.time.Month;
-import java.util.ArrayList;
 
-public class YearlyReport  {
-
+public class YearlyReport {
+   
     public  Month month;
     public  int amount;
-    public  boolean is_expense;
+    public  boolean isExpense;
+    public int sumOfExpense=0;
+    public int sumOfIncome=0;
+    public YearlyReport(Month month, int amount, boolean isExpense, int sumOfExpense,int sumOfIncome) {
 
-    public YearlyReport(ArrayList<YearlyReportItem> items) {
         this.month = month;
         this.amount = amount;
-        this.is_expense = is_expense;
+        this.isExpense = isExpense;
+        this.sumOfExpense=sumOfExpense;
+        this.sumOfIncome=sumOfIncome;
     }
-
-
 }

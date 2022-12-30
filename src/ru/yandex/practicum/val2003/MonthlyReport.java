@@ -1,34 +1,64 @@
 package ru.yandex.practicum.val2003;
 
+
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+
 
 public class MonthlyReport {
 
+void getMaxExpenseForMonth(){
 
-    List<String> mostIncomeItem;
-    List<Integer> maxIncomeForMonth;
-    //item_name,is_expense,quantity,sum_of_one
-
-public ArrayList<MonthlyReportItem> items;
-    public Month monthIs;
-  //  mostIncomeItem = new ArrayList<>();
-   // maxIncomeForMonth = new ArrayList<>();
-public MonthlyReport(Month monthIs,ArrayList<MonthlyReportItem> items) {
-
-this.items=items;
-this.monthIs=monthIs;
 
 }
-    public String getShortReport(int index){
-        return ("Название месяца: " + Month.of(index)); //+
-              //  "\nСамый прибыльный товар:  " + mostIncomeItem.get(index) +
-             //   "\nЗаработанная сумма: " + maxIncomeForMonth.get(index));
+    public ArrayList<MonthlyReportItem> getItems() {
+        return items;
     }
-void printMontlyReport(){
-    System.out.println();
-}
+
+    private ArrayList<MonthlyReportItem> items;
+
+    public Month getMonthIs() {
+        return monthIs;
+    }
+
+    private Month monthIs;
+
+    public MonthlyReport(Month monthIs, ArrayList<MonthlyReportItem> items) {
+
+        this.items = items;
+        this.monthIs = monthIs;
+
+    }
+
+
+
+
+
+
+    public static class MonthlyReportItem {
+
+        public String itemName;
+
+        public boolean isExpense;
+        public int quantity;
+        public int price; //sum_of_one
+        public int sumOfExpense;
+        public int sumOfIncome;
+
+        public MonthlyReportItem(String itemName, boolean isExpense, int quantity, int price, int sumOfExpense,int sumOfIncome) {
+            this.itemName = itemName;
+            this.isExpense = isExpense;
+            this.quantity = quantity;
+            this.price = price;
+            this.sumOfExpense=sumOfExpense;
+            this.sumOfIncome=sumOfIncome;
+
+        }
+
+    }
+
+
 
 
 }

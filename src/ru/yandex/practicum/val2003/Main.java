@@ -1,6 +1,7 @@
 package ru.yandex.practicum.val2003;
 
-import java.util.Scanner;
+import java.time.Month;
+import java.util.*;
 
 public class Main {
 public static void main(String[] args) {
@@ -9,14 +10,14 @@ public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     Reconciliation reconciliation = new Reconciliation();
     ReportParser reportParser = new ReportParser();
-    //MonthlyReport monthlyReport = null;
-    Reports reports= null;
-    //YearlyReport yearlyReport = null;
+
+
+
     int userInput;
     boolean swich = true;
     System.out.println(
 
-            "Автоматизированная бухгалтерия. Для использования введите одну из цирф 1-5" );
+            "Это бухгалтерия. Для использования введите одну из цирф 1-5" );
 
     while(swich) {
         menu();
@@ -24,26 +25,38 @@ public static void main(String[] args) {
 
         switch (userInput) {
             case 1 : {
+                reportParser.getAllMonth();
 
-                reportParser.getNameOfFales();
-                reportParser.getAllMonthFiles();
-                //System.out.println(monthlyReport.toString());
+
 
 
                 break;
             }
             case 2 :  {
 
-                reportParser.getNameOfFales();
-                reportParser.readYearlyReport();
+
+                reportParser.getYearlyArrayList();
+                break;
             }
             case 3 : {
-                System.out.println();
+
+                Set<Month> months = reportParser.monthlyReportsList.keySet();
+                HashMap<Month, ArrayList<MonthlyReport.MonthlyReportItem>> x = reportParser.monthlyReportsList;
+               for (Month m:months) {
+
+                   x.get(m);
+
+               }
+
+
                 /*if (reconciliation.reportsCompare())
                         {
 
                             System.out.println("\nСверка данных завершена.");
+
                 }*/
+
+
             }
             case 4 : {
                 if(true//monthlyReport == null
